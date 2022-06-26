@@ -29,3 +29,9 @@ function checkIPv(getPubIP, getPubIP64) {
 }
 
 console.log(checkIPv(getPubIP, getPubIP64));
+
+function copyIP(getPubIP64) {
+    var copedIP = document.getElementById('pubIP').innerHTML;
+    navigator.clipboard.writeText(copedIP); 
+    alert('Copied IP to clipboard');
+}
