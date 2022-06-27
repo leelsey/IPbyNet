@@ -1,6 +1,6 @@
 let getPubIP = 'https://api.ipify.org?format=json';
 let getPubIP64 = 'https://api64.ipify.org?format=json';
-
+console.log(checkIPv(getPubIP, getPubIP64));
 function checkIPv(getPubIP, getPubIP64) {
     if (getPubIP.ip === getPubIP64.ip) {
         fetch(getPubIP)
@@ -27,9 +27,6 @@ function checkIPv(getPubIP, getPubIP64) {
         .catch (error => console.log(error));
     }
 }
-
-console.log(checkIPv(getPubIP, getPubIP64));
-
 function copyIP(getPubIP64) {
     var copedIP = document.getElementById('pubIP').innerHTML;
     navigator.clipboard.writeText(copedIP); 
