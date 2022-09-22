@@ -9,6 +9,6 @@ if (preg_match('/curl/i', $user_agent)) {
         echo $pub_ipv4 . ' - ' . $pub_ipv6;
     }
 } else {
-    header( 'Location: https://leelsey.github.io/IPbyNet/' );
+    echo file_get_contents('https://leelsey.github.io/IPbyNet/index.html');
 }
 ?>
